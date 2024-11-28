@@ -1,5 +1,5 @@
 import { Sequelize } from "sequelize";
-import * as jwt from "jsonWebToken";
+import * as jwt from "jsonwebtoken";
 import * as crypto from "crypto";
 import { User, Auth, Pets } from "./../models/models";
 const secret = process.env.SECRET;
