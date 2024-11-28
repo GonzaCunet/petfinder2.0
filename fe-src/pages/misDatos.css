@@ -1,0 +1,8 @@
+.h1 {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 20px;
+}

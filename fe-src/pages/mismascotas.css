@@ -1,0 +1,13 @@
+.main-mis-mascotas {
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.tittle-mis-mascotas {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  text-align: center;
+}

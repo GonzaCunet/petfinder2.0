@@ -1,0 +1,37 @@
+{
+  "name": "pet-finder",
+  "version": "1.0.0",
+  "description": "",
+  "source": "./fe-src/index.html",
+  "scripts": {
+    "dev:be": "nodemon --watch ./be-src/*/**.ts --exec ts-node ./be-src/index.ts",
+    "build:be": "tsc",
+    "dev:fe": "parcel --dist-dir ./fe-dist/",
+    "build:fe": "parcel build --dist-dir ./fe-dist/",
+    "sync": "ts-node ./be-src/db/sync.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mapbox-gl": "^3.4.0",
+    "nodemon": "^3.1.4",
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "@mapbox/search-js-web": "^1.0.0-beta.22",
+    "@types/express": "^5.0.0",
+    "@vaadin/router": "^1.7.5",
+    "algoliasearch": "^4.24.0",
+    "cloudinary": "^2.5.0",
+    "cors": "^2.8.5",
+    "dropzone": "^6.0.0-beta.2",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mapbox-gl": "^3.7.0",
+    "pg": "^8.12.0",
+    "pg-hstore": "^2.3.4",
+    "resend": "^4.0.1",
+    "sequelize": "^6.37.3",
+    "sweetalert2": "^11.14.5"
+  }
+}

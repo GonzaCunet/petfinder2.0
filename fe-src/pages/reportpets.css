@@ -1,0 +1,61 @@
+.report-container {
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.tittle-mascotas {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  text-align: center;
+}
+.label-text {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+}
+.form1-container {
+  display: flex;
+  flex-direction: column;
+}
+.reportpet-text {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  text-align: center;
+}
+.imageupload-container {
+  width: 335px;
+  height: 180px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.foto-input {
+  width: 335px;
+  height: 180px;
+  border-radius: 3px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.search-form {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.form1 {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  width: 335px;
+}
+.input-report {
+  font-size: 24px;
+  width: 335px;
+  height: 50px;
+  padding: 0;
+}

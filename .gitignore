@@ -1,0 +1,6 @@
+/node_modules
+/.parcel-cache
+/fe-dist
+/be-dist
+.env
+/be-src/db/sync.ts

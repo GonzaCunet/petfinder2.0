@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(191.08deg, #ffffff 8.17%, #def4f0 62.61%);
+}
+
+.img {
+  height: 300px;
+  width: 300px;
+}
+
+.button {
+  background-color: blue;
+  color: white;
+  height: 50px;
+  width: 250px;
+}
