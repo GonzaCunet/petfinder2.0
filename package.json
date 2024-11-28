@@ -4,10 +4,12 @@
   "description": "",
   "source": "./fe-src/index.html",
   "scripts": {
+    "start": "node ./be-dist/index.js",
     "dev:be": "nodemon --watch ./be-src/*/**.ts --exec ts-node ./be-src/index.ts",
     "build:be": "tsc",
-    "dev:fe": "parcel --dist-dir ./fe-dist/",
     "build:fe": "parcel build --dist-dir ./fe-dist/",
+    "build": "npm run build:fe && npm run build:be",
+    "dev:fe": "parcel --dist-dir ./fe-dist/",
     "sync": "ts-node ./be-src/db/sync.ts"
   },
   "author": "",
@@ -15,7 +17,8 @@
   "devDependencies": {
     "@types/mapbox-gl": "^3.4.0",
     "nodemon": "^3.1.4",
-    "parcel": "^2.12.0"
+    "parcel": "^2.12.0",
+    "svgo": "^3.3.2"
   },
   "dependencies": {
     "@mapbox/search-js-web": "^1.0.0-beta.22",
