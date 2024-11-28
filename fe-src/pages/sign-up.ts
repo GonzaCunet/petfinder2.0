@@ -21,7 +21,7 @@ export class SignUpInit extends HTMLElement {
           <input class="input" type="password" name="contraseña" />
           <label class="label-text" for="contraseña">CONFIRMAR CONTRASEÑA</label>
           <input class="input" type="password" name="confirmarcontraseña" />
-             <h3>¿ya tenes una cuenta?</h3><a class="text-link" href="">inicia sesión</a>
+             <h3>¿ya tenes una cuenta?</h3><a class="text-link" href="/ingresar">inicia sesión</a>
           <div class="button-container">
               <button-el>Siguiente</button-el>
           </div></form>
