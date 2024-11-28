@@ -16,6 +16,10 @@
 .label-text {
   margin: 0;
 }
+.iniciartittle {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+}
 
 .text-container {
   font-family: "Poppins", sans-serif;

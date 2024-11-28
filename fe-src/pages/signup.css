@@ -2,7 +2,11 @@
   margin: 0 auto;
   width: 300px;
 }
-.formulario {
+.formulario-signup {
   margin: 0 auto;
   width: 300px;
+}
+.signuptittle {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
 }

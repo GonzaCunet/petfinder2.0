@@ -9,22 +9,23 @@ export class ModifyPasswordInit extends HTMLElement {
   render() {
     this.innerHTML = /*html*/ `
     <header-el></header-el>
-    <div class="main-ingresar">
+      <div class="main-modifypass">
 
-            <h1>Elegí una nueva clave</h1>
-        </div>
-          <form class="formulario">
+            <h1 class="h1-password">Elegí una nueva clave</h1>
+        
+          <form class="formulario-pass">
             <label class="label-text" for="password" name="password">Password</label>
             <input class="input-ingresar" type="password" name="password" />
           <label class="label-text" for="confirmPassword">Confirma tu nueva clave</label>
             <input class="input-ingresar" type="password" name="confirmPassword" />
         <button-el>Guardar</button-el>
         </form>
-        </div>
+       
+      </div>
     `;
 
     //TODO  cambiar el password. local storage
-    const form = this.querySelector(".formulario");
+    const form = this.querySelector(".formulario-pass");
     form?.addEventListener("submit", (e) => {
       const target = e.target as HTMLFormElement;
       const password = target?.elements["password"].value;

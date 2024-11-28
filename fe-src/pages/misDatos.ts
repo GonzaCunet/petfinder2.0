@@ -10,7 +10,7 @@ export class MisDatosInit extends HTMLElement {
     <div class="main-ingresar">
         
         <div class="misdatos-text-container">
-            <h1>Iniciar Sesión</h1>
+            <h1 class="misDatosTittle">Datos Personales</h1>
         </div>
           
         <button-el class="misDatos">mis datos personales</button-el>

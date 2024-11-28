@@ -9,10 +9,10 @@ export class SignUpInit extends HTMLElement {
       <header-el></header-el>
       <div class="main-ingresar">
           <div class="text-container">
-              <h1>Registrarse</h1>
+              <h1 class="signuptittle">Registrarse</h1>
               <h3>ingresá los siguientes datos para realizar el registro</h3>
           </div>
-          <form class="formulario">
+          <form class="formulario-signup">
           <label class="label-text" for="email">EMAIL</label>
           <input class="input" type="text" name="Email" />
           <label class="label-text" for="name">Nombre</label>
@@ -30,7 +30,7 @@ export class SignUpInit extends HTMLElement {
       
       `;
 
-    const form = this.querySelector(".formulario");
+    const form = this.querySelector(".formulario-signup");
     form?.addEventListener("submit", (e) => {
       e.preventDefault();
       const target = e.target as HTMLFormElement;

@@ -30,7 +30,7 @@ class Header extends HTMLElement {
                 border-bottom-right-radius: 8px;
                 }
 
-              .imagen{
+              .logoimagen{
               width:30px;
               height:30px;}
 
@@ -70,6 +70,7 @@ class Header extends HTMLElement {
               color:aqua; }
 
              .cerrar-sesion {
+                color:white;
                font-size: 22px;
                
     }
@@ -80,7 +81,7 @@ class Header extends HTMLElement {
     }
              `;
     header.innerHTML = `
-                <img class="imagen" src=${mapslogo} alt="">
+                <img class="logoimagen" src=${mapslogo} href="/" alt="">
                 <img class="burger-menu-img" src=${menu} alt="">
                 <div class="burger-div-close">
                   <img class="burger-close" src=${menu}alt="">
@@ -105,11 +106,15 @@ class Header extends HTMLElement {
 
     shadow.appendChild(header);
     shadow.appendChild(style);
+    const logo = shadow.querySelector(".logoimagen");
     const logOut = shadow.querySelector(".cerrar-sesion");
     const burgerMenu = shadow.querySelector(".burger-menu-img");
     const burgerDiv = shadow.querySelector(".burger-div-close");
     const burgerclose = shadow.querySelector(".burger-close");
 
+    logo?.addEventListener("click", () => {
+      Router.go("/");
+    });
     logOut?.addEventListener("click", () => {
       console.log("holaa");
       burgerDiv?.classList.replace("burger-div-close", "burger-div-open");
