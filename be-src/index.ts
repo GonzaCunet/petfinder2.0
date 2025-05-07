@@ -61,8 +61,11 @@ app.post("/pets", authMiddleware, async (req, res) => {
   const { name, lastLocation, photoURL, lat, lng } = req.body;
   const UserId = (req as any)._user.id;
   console.log({ req: (req as any)._user });
+  console.log("Request body:", req.body);
+  console.log("User extraído del token:", UserId);
   try {
     const createPhoto = await cloudinaryPhotoUpload(photoURL);
+    console.log("Foto subida a Cloudinary:", createPhoto);
     const returnpet = await createPets(
       name,
       lastLocation,
@@ -81,7 +84,7 @@ app.post("/pets", authMiddleware, async (req, res) => {
     });
   } catch (error) {
     console.log(error, "error al crear la mascota");
-    res.status(400).json(error.message);
+    res.status(400).json({ error: error.message || "Fallo general" });
   }
 });
 
@@ -120,6 +123,7 @@ app.post("/auth/token", async (req, res) => {
 
 app.get("/user", authMiddleware, async (req, res) => {
   const user_id = (req as any)._user.id;
+  console.log((req as any)._user);
   const respuesta = await getUserByPk(user_id);
   res.json(respuesta);
 });

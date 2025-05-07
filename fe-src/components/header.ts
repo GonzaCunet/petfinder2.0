@@ -3,6 +3,7 @@ import { Router } from "@vaadin/router";
 
 const mapslogo = require("./../images/mapslogo.svg");
 const menu = require("./../images/menu.svg");
+const cruz = require("./../images/close.svg");
 
 class Header extends HTMLElement {
   shadow: ShadowRoot;
@@ -84,13 +85,16 @@ class Header extends HTMLElement {
                 <img class="logoimagen" src=${mapslogo} href="/" alt="">
                 <img class="burger-menu-img" src=${menu} alt="">
                 <div class="burger-div-close">
-                  <img class="burger-close" src=${menu}alt="">
-                  <a class="burger-text" href="misdatos"> Mis datos</a>
-                  <a class="burger-text" href="mismascotas"> Mis mascotas reportadas</a>
+                  <img class="burger-close" src=${cruz} alt="">
+                  
                   ${
                     state.data.token == ""
-                      ? `<a class="burger-text" href="/signup"> Reportar mascota</a>`
-                      : `<a class="burger-text" href="/reportpets"> Reportar mascota</a>`
+                      ? `<a class="burger-text" href="/signup"> Mis datos</a>
+                  <a class="burger-text" href="/signup"> Mis mascotas reportadas</a>
+                      <a class="burger-text" href="/signup"> Reportar mascota</a>`
+                      : `<a class="burger-text" href="misdatos"> Mis datos</a>
+                  <a class="burger-text" href="mismascotas"> Mis mascotas reportadas</a>
+                      <a class="burger-text" href="/reportpets"> Reportar mascota</a>`
                   }
                    
                   ${
@@ -116,9 +120,8 @@ class Header extends HTMLElement {
       Router.go("/");
     });
     logOut?.addEventListener("click", () => {
-      console.log("holaa");
       burgerDiv?.classList.replace("burger-div-close", "burger-div-open");
-      location.reload();
+      // location.reload();
       state.logout();
       Router.go("/");
     });

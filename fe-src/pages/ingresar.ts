@@ -13,7 +13,7 @@ export class IngresarInit extends HTMLElement {
     <div class="main-ingresar">
         <img class="imagen" src=${puerta}>
         <div class="text-container">
-            <h1>Iniciar Sesión</h1>
+            <h1 class="iniciartittle">Iniciar Sesión</h1>
             <h3>ingresá los datos para iniciar sesión</h3>
         </div>
           <form class="formulario">
@@ -21,7 +21,7 @@ export class IngresarInit extends HTMLElement {
             <input class="input-ingresar" type="text" name="Email" />
           <label class="label-text" for="pass">CONTRASEÑA</label>
             <input class="input-ingresar" type="password" name="pass" />
-            <a class="text-link" href="">olvidé mi contraseña</a>
+            <!-- <a class="text-link" href="">olvidé mi contraseña</a> -->
           
         <button-el>Acceder</button-el>
         </form>

@@ -31,15 +31,17 @@ export class ReportPetsInit extends HTMLElement {
             <label class="uploading">Agregar foto</label>
             <img class="foto-input" src=${addphoto}>
           </div>
-
+          <div>
             <form class="search-form">
               <label >1-Buscar por ubicación (Ciudad, Provincia)</label>
               <input class="input-report" name="q" type="search">
               <button-el>Buscar</button-el>
               <label >2-Seleccionar un punto en el mapa</label>
-                  <div class="map" id='map' style='width: 300px; height: 200px;'></div>
+              
+                 <div class="map" id='map' style='width: 300px; height: 200px;'></div>
                   
                   </form>
+                  </div>
                   <button-el id="reportbutton">Reportar mascota</button-el>
         </div>
                   `;

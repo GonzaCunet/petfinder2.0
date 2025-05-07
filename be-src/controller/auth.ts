@@ -89,9 +89,10 @@ export async function patchAuth(userId, password) {
 
 export function authMiddleware(req, res, next) {
   const token = req.headers.authorization.split(" ")[1];
-
+  console.log(token, "token desde el middleware");
   try {
     const data = jwt.verify(token, secret);
+    console.log(data);
     req._user = data;
     next();
   } catch (error) {

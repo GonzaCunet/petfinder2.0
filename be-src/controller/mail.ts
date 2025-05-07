@@ -19,10 +19,10 @@ export async function findMail(petId) {
 
 export async function sendMail(email, name, phone, textarea) {
   try {
-    console.log({ resend });
+    console.log("hola");
     const respuesta = await resend.emails.send({
       from: `Pet Finder App <onboarding@resend.dev>`,
-      to: ["lucas.82@outlook.com"], //acá iría el email
+      to: ["gonza.cunet@outlook.com"], //acá iría el email
       subject: "ví la mascota que publicaste",
       html: `hola, ${name} vio tu mascota, podes comunicarte con él al siguiente número: ${phone} y te dejó este mensaje: ${textarea}`,
     });

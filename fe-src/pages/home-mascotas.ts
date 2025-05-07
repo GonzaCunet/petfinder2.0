@@ -57,14 +57,12 @@ export class HomeMascotasInit extends HTMLElement {
         }
       });
       const form = this.querySelector(`#form${pet.id}`);
-      console.log(form);
       form?.addEventListener("submit", (e) => {
         const target = e.target as HTMLFormElement;
         const name = target?.elements["name"].value;
         const phone = target?.elements["phone"].value;
         const textarea = target?.elements["textarea"].value;
         const petInfo = { name, phone, textarea };
-        console.log(petInfo);
         state.sendPetInfo(pet.id, petInfo);
       });
     });
